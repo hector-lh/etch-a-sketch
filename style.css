@@ -1,0 +1,18 @@
+#grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.row {
+    display: flex;
+    gap: 4px;
+}
+.square {
+    flex: 1;
+    aspect-ratio: 1;
+    background: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
