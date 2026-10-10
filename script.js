@@ -12,6 +12,7 @@ function generateGrid(rows, cols){
             square.classList.add("square");
             square.addEventListener("mouseenter", () => {
                 square.style.background = generateRandomHexColor();
+                increaseOpacity(square);
             })
             row.appendChild(square);
         }
@@ -28,6 +29,11 @@ function changeGridSize(){
     if (size !== null){
         generateGrid(size,size);
     }
+};
+
+function increaseOpacity(square){
+    const currentOpacity = parseFloat(getComputedStyle(square).opacity);
+    square.style.opacity = Math.min(currentOpacity + 0.1, 1);
 };
 
 generateGrid(16,16);

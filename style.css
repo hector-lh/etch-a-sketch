@@ -16,6 +16,7 @@ button {
     display: flex;
     flex-direction: column;
     aspect-ratio: 1;
+    border: 5px solid black;
 }
 
 .row {
@@ -25,8 +26,8 @@ button {
 .square {
     flex: 1;
     aspect-ratio: 1;
-    background: lightblue;
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
 }
