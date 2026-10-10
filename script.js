@@ -11,7 +11,7 @@ function generateGrid(rows, cols){
             const square = document.createElement("div");
             square.classList.add("square");
             square.addEventListener("mouseenter", () => {
-                square.style.background = "black";
+                square.style.background = generateRandomHexColor();
             })
             row.appendChild(square);
         }
@@ -31,3 +31,13 @@ function changeGridSize(){
 };
 
 generateGrid(16,16);
+
+function generateRandomHexColor(){
+    const hexChars = "0123456789abcdef";
+    let color = "#";
+    for (let i = 0; i < 6; i++){
+        const randomChar = Math.floor(Math.random() * 16);
+        color += hexChars[randomChar];
+    }
+    return color;
+};
