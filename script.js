@@ -1,5 +1,7 @@
 function generateGrid(rows, cols){
     const container = document.getElementById("grid-container");
+    // Empty container
+    container.replaceChildren();
     // Create rows
     for (let r = 0; r < rows; r++){
         const row = document.createElement("div");
@@ -14,6 +16,17 @@ function generateGrid(rows, cols){
             row.appendChild(square);
         }
         container.appendChild(row);
+    }
+};
+
+function changeGridSize(){
+    size = prompt("What size grid?");
+    if (size > 100){
+        alert("The grid can't be bigger than a 100x100");
+        return;
+    }
+    if (size !== null){
+        generateGrid(size,size);
     }
 };
 

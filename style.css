@@ -1,12 +1,26 @@
-#grid-container {
+body {
+    margin: 0;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    align-items: center;
+}
+
+button {
+    flex: none;
+}
+
+#grid-container {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 1;
 }
 
 .row {
     display: flex;
-    gap: 4px;
+    flex: 1;
 }
 .square {
     flex: 1;
